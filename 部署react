@@ -1,0 +1,23 @@
+linux部署create-react-app 方式的react
+安装环境:
+1.node.js，根目录：/data/tools/ 下面已经下载了：node-v8.12.0-linux-x64.tar.gz安装包
+2.创建软连接：/data/tools# ln -s /data/tools/node-v8.12.0-linux-x64/bin/* /usr/local/bin/
+3.查看node、npm的版本号： node -v && npm -v
+打包代码到服务器：
+1.在自己根目录下面运行 npm run build 生成 build 目录
+2.将 build 目录、 package.json 、 package-lock.json 、 server.js 拷⻉到服务器上/data/project/darknet-project/目录下面
+3.在服务器项目根目录安装所需要的依赖包: npm install ,此时会生成node_modules依赖包目录
+
+启动服务
+1.安装screen守护进程：sudo apt-get install screen
+2.查看screen 是否安装成功：screen -v
+3.创建session：
+(1)创建一个 session : screen -dmS <session name>
+(2)连接 session : screen -r <session name>
+(3)在已连接的 session 中启动服务: node server.js
+(4)退出 session : CTRL + a d
+(5)查看screen的session列表: screen -li
+(6)需要查看时可重新连接 session 查看,进程不会中断。
+打开页面：输入地址：http://183.230.255.201:8024/
+
+
