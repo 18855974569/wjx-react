@@ -18,6 +18,5 @@ linux部署create-react-app 方式的react
 (4)退出 session : CTRL + a d
 (5)查看screen的session列表: screen -li
 (6)需要查看时可重新连接 session 查看,进程不会中断。
-打开页面：输入地址：http://183.230.255.201:8024/
 
 
