@@ -2,13 +2,20 @@
   "name": "darknet",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8803",
   "dependencies": {
+    "antd": "^3.10.2",
+    "jquery": "^3.3.1",
+    "multer": "^1.4.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-dropzone": "^6.2.4",
+    "react-scripts": "2.0.5",
+    "superagent": "^4.0.0-beta.5"
   },
   "scripts": {
     "start": "react-scripts start",
+    "startproxy": "nodemon -w server.js server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -21,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
 }
